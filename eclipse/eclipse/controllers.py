@@ -1,8 +1,14 @@
-from flask import Blueprint, render_template
-from models import tarefas
+from flask import Blueprint, render_template, request, redirect, url_for
+from .models import tarefa, addTarefa
 
-tarefa_controller=Blueprint('tarefa', __name__)
+tarefa_controllers=Blueprint("tarefa", __name__)
 
-@tarefa_controller.route('/')
+@tarefa_controllers.route("/")
 def index():
-    return render_template('index.html', tarefas=tarefas)
+    return render_template('index.html', tarefas=tarefa)
+
+@tarefa_controllers.route("/add", methods=["POST"])
+def add():
+    descricao = request.form["descricao"]
+    addTarefa(descricao)
+    return redirect(url_for('tarefa.index'))
