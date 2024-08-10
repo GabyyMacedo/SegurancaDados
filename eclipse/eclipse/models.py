@@ -1,12 +1,11 @@
 class Tarefa:
-    def __init__(self, id, descricao, concluido=False):
+    def __init__(self,id,descricao,completo = False):
         self.id=id
         self.descricao=descricao
-        self.concluido=concluido
+        self.completo=completo
+tarefa=[]
 
-tarefas=[]
-
-t=Tarefas(1, "Comer")
-tarefas.append(t)
-t2=Tarefas(2, "Dormir", True)
-tarefas.append(t2)
+def addTarefa(descricao):
+    id = len(tarefa) + 1
+    nova_tarefa = Tarefa(id,descricao)
+    tarefa.append(nova_tarefa)
