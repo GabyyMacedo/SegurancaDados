@@ -40,4 +40,11 @@ CREATE TABLE `usuario` (
 
 
 INSERT INTO especializacao 
-  (nome, descricao) VALUES ('Alquimista', 'Especialista em pocoes e elixires com propriedades magicas');
+  (nome, descricao) VALUES ('Alquimista', 'Especialista em poções e elixires com propriedades mágicas e curativas');
+
+INSERT INTO classe 
+  (nome, descricao) VALUES ('Xamã', 'Especialista em comunicação com espíritos e uso de rituais antigos');
+
+INSERT INTO especializacao 
+  (nome, descricao) VALUES ('Alquimista', 'Especialista em pocoes e elixires com propriedades magicas e curativas');
+
